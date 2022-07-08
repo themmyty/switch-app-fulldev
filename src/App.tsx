@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter,Routes, Route} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Nav from './Components/Nav/Nav';
+import Home from './Pages/Home';
+import Customer from './Pages/Customer';
+import Payment from './Pages/Payment';
+import Support from './Pages/Support';
+import Report from './Pages/Report';
+import More from './Pages/More';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Nav/>
+     <div>
+     <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="/customer" element={ <Customer/> }/>
+        <Route path="/report" element={ <Report/> } />
+        <Route path="/payment" element={ <Payment/> } />
+        <Route path="/support" element={ <Support/> } />
+        <Route path="/more" element={ <More/> } />
+      </Routes>
+      </BrowserRouter>
+     </div>
     </div>
   );
 }
