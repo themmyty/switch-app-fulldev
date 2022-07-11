@@ -1,0 +1,33 @@
+.bannerContainer{
+    background-color:#1899D70D;
+    height:114px;
+    width:1100px;
+    margin-top:59px;
+    margin-left: 104px;
+    margin-right: 104px;
+    display: flex;
+    position: relative;
+
+}
+.texts p{
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: 'gray';
+    width: '50%';
+  
+}
+.texts h5{
+    padding-top: 20px;
+    padding-left: 20px;
+    
+}
+.bannerContainer img{
+    width: 20px;
+    height:20px;
+    position: absolute;
+    position: absolute;
+    right: 76px;
+    top: 45px;
+    
+}

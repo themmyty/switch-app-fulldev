@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from './Nav.module.css';
 import Logo from './../../assets/images/Switch-logo.png'
-import user from './../../assets/images/User.png'
+import UserAccount from '../UserAccount-component/UserAccount';
 import Search from '../Search-component/Search';
-import Dropdowncomponent from '../Dropdown-component'
+import Dropdowncomponent from '../Dropdown-component/Dropdown-component'
+import QuickLinkdropdown from '../Dropdown-component/QuickLink-dropdown';
+import HelpComponent from '../Help-component/helpComponent';
+import BannerComponent from '../Banner-component/BannerComponent';
+
 
 
 
@@ -24,11 +28,16 @@ const Nav: React.FC<{}> = () => {
                 <Search/>
             </div>
             <div>
-                <img src={user}/>
+                <QuickLinkdropdown/>
             </div>
             <div>
-                <Dropdowncomponent />
+            <HelpComponent/>
             </div>
+            
+            <div className={styles.useraccount}>
+                <UserAccount/>
+            </div>
+            
         </nav>
         <div className={styles.navOptions}>
            <ul>
@@ -39,6 +48,11 @@ const Nav: React.FC<{}> = () => {
            <li><a href="/support">Support</a></li>
            <li><a href="/more">More</a></li>
             </ul> 
+        </div>
+        <div style={{width:'100%',
+        height:1,backgroundColor:'gray',marginTop:30}}></div>
+        <div>
+            <BannerComponent/>
         </div>
         </>
     )
